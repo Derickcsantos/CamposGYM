@@ -1,0 +1,286 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+header nav {
+    background: #f85528;
+    color: #f9efe5;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header nav .logo a {
+    text-decoration: none;
+    color: #5b0004;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav .logo a span{
+    color: #fff;
+}
+
+header nav .menu {
+    list-style: none;
+    display: flex;
+}
+
+header nav .menu li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav .menu li a {
+    color: #f9efe5;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header nav .menu li a:hover{
+    color: #5b0004;
+}
+
+/* Hamburger menu icon */
+header nav .menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+header nav .menu.active {
+    display: block;
+}
+
+/* Sessão Hero */
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url(../img/FotoPesos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.hero-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
+.hero-content span{
+    color: #f85528;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #f85528;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    font-weight: 700;
+}
+
+.hero-content .btn-cta {
+    padding: 10px 20px;
+    background: #f9efe5;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition:  0.5s ease;
+}
+ 
+.hero-content .btn-cta:hover{
+    background-color: #f85528;
+    color: #fff;
+    padding: 15px;
+}
+
+.contato{
+    background-color: #fff;
+    padding: 50px 20px;
+}
+
+.contato h2{
+    text-align: center;
+    color: #5b0004;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+/* Estilização do Formulário de Contato */
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+
+.contato input, .contato textarea {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contato input:focus, .contato textarea:focus {
+    border-color: #ccc;
+    outline: none;
+    box-shadow: 0 0 4px rgba(216, 67, 8, 0.5);
+}
+
+.contato textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contato button {
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #5b0004;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contato button:hover {
+    background-color: #5b0005e8;
+}
+
+/* Estilização do Botão de Scroll Up */
+.scroll-up-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 28px;
+    background-color: #5b0004;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-up-btn:hover {
+    background-color: #5b0004;
+    transform: scale(1.1);
+}
+
+/* Estilização do Botão WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    padding: 15px;
+    font-size:12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 3;
+}
+
+.whatsapp-button:hover {
+    background-color: #25d366;
+    transform: scale(1.1);
+}
+
+.whatsapp-button i {
+    margin-right: 0;
+    font-size: 40px;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header nav .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f85528;
+    }
+
+    header nav .menu li {
+        margin-left: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    header nav .menu-icon {
+        display: block;
+    }
+
+    header nav .menu.active {
+        display: flex;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

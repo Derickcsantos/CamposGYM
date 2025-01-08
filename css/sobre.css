@@ -1,0 +1,65 @@
+#sobre{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sobre-content{
+    background-color:#fff;
+    padding: 50px 20px;
+    flex: 1;
+}
+
+.image-sobre img{
+    padding: 40px;
+    width: 100%;
+}
+
+.sobre-content h2{
+    color: #5b0004;
+    text-align: center;
+}
+
+.sobre-content p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #000;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    #sobre {
+        flex-direction: column; /* Altera a direção dos itens para coluna em telas pequenas */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .icones-sobre {
+        position: relative;
+        top: auto;
+        left: auto;
+        flex-direction: row; /* Garante que os ícones fiquem em linha */
+        justify-content: center; /* Centraliza os ícones */
+        margin-top: 20px; /* Espaço entre os ícones e o conteúdo */
+    }
+
+    .image-sobre {
+        order: -1; /* Coloca a imagem antes do texto */
+        width: 100%; /* Garante que a imagem ocupe a largura total da tela */
+        text-align: center;
+    }
+
+    .sobre-content {
+        order: 1; /* Coloca o texto depois da imagem */
+        padding: 20px; /* Ajusta o padding para telas pequenas */
+    }
+
+    .sobre-content p {
+        font-size: 1rem; /* Diminui o tamanho da fonte em dispositivos móveis */
+        padding: 15px; /* Ajusta o padding para dispositivos móveis */
+    }
+
+    .icones-sobre i {
+        font-size: 40px; /* Diminui o tamanho dos ícones para telas menores */
+    }
+}
