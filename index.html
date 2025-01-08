@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/sobre.css">
     <link rel="stylesheet" href="css/planos.css">
+    <link rel="icon" href="./img/camposGYM.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -67,7 +68,7 @@
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#planos">Planos</a></li>
-                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#album">Galeria</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -128,6 +129,36 @@
                 </div>
             </div>
         </div> 
+    </section>
+    
+    <section id="album" class="album">
+        <h2>Conheça a CamposGYM</h2>
+        <div class="galeria">
+            <div class="foto" onclick="mostrarFoto(this)">
+                <img src="./img/visaogeral.webp" alt="Imagem 1">
+            </div>
+            <div class="foto" onclick="mostrarFoto(this)">
+                <img src="./img/cadeirante.webp" alt="Imagem 1">
+            </div>
+            <div class="foto" onclick="mostrarFoto(this)">
+                <img src="./img/equipamentos.webp" alt="Imagem 1">
+            </div>
+            <div class="foto" onclick="mostrarFoto(this)">
+                <img src="./img/garrafa.jpg" alt="Imagem 1">
+            </div>
+            <div class="foto" onclick="mostrarFoto(this)">
+                <img src="./img/espaço.webp" alt="Imagem 1">
+            </div>
+            <div class="foto" onclick="mostrarFoto(this)">
+                <img src="./img/FotoPesos.jpg" alt="Imagem 1">
+            </div>
+        </div>
+        
+        <!-- Modal para exibir imagem no centro da tela -->
+        <div id="modal" class="modal" onclick="fecharModal()">
+            <img id="modal-img" class="modal-img" src="" alt="Imagem maior">
+        </div>
+        
     </section>
 
     <section id="contato" class="contato">
