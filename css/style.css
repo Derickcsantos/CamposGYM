@@ -17,6 +17,7 @@ html {
 }
 
 /* Navbar */
+/* Navbar */
 header nav {
     background: #f85528;
     color: #f9efe5;
@@ -34,7 +35,7 @@ header nav .logo a {
     font-weight: bold;
 }
 
-header nav .logo a span{
+header nav .logo a span {
     color: #fff;
 }
 
@@ -45,7 +46,8 @@ header nav .menu {
 
 header nav .menu li {
     display: inline;
-    margin-left: 20px;
+    margin: 40px 0 0 20px;
+
 }
 
 header nav .menu li a {
@@ -55,7 +57,7 @@ header nav .menu li a {
     font-weight: 600;
 }
 
-header nav .menu li a:hover{
+header nav .menu li a:hover {
     color: #5b0004;
 }
 
@@ -67,9 +69,79 @@ header nav .menu-icon {
     cursor: pointer;
 }
 
-header nav .menu.active {
-    display: block;
+/* Estilos para o menu no mobile */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        justify-content: flex-start; /* Ajuste para que os itens fiquem alinhados ao topo */
+        align-items: flex-start;
+        padding: 20px;
+        position: relative; /* Necessário para o ícone de menu ser posicionado no topo à direita */
+    }
+
+    header nav .logo a {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Menu */
+    header nav .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        background-color: #f85528;
+        text-align: center;
+    }
+
+    header nav .menu li {
+        display: inline-block;
+        margin-left: 10px;
+        position: relative;
+        font-size: 10px; 
+    }
+    
+    header nav .menu li:not(:last-child)::after {
+        content: "•"; /* Usando um marcador de ponto */
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff; /* Cor do marcador */
+    }
+
+    header nav .menu.active {
+        display: block;
+    }
+
+    /* Ícone do menu */
+    header nav .menu-icon {
+        display: block;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+        position: absolute; /* Posicionamento absoluto para o ícone */
+        top: 20px; /* Distância do topo */
+        right: 20px; /* Distância da direita */
+    }
+
+    header nav .menu li a {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        padding: 25px 0;
+        margin-top: 20px;
+        text-decoration: none;
+    }
+
+    header nav .menu li a:hover {
+        background-color: #5b0004;
+    }
 }
+
+
+
 
 /* Sessão Hero */
 .hero {
@@ -325,32 +397,14 @@ header nav .menu.active {
     font-size: 40px;
 }
 
-
-/* Responsividade */
-@media (max-width: 768px) {
-    header nav .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #f85528;
-    }
-
-    header nav .menu li {
-        margin-left: 0;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    header nav .menu-icon {
-        display: block;
-    }
-
-    header nav .menu.active {
-        display: flex;
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
+.custom-scrollbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%; /* Inicialmente 0% */
+    height: 5px; /* Altura da barra */
+    background-color: #f85528; /* Cor da barra */
+    z-index: 1000;
+    transition: width 0.1s ease-out; /* Animação para transição suave */
 }
+
