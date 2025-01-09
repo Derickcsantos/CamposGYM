@@ -29,7 +29,7 @@ O projeto é desenvolvido com foco em performance, otimização e design respons
 | **Tecnologias**  | **Ferramentas**    |
 |:-----------------|:-------------------|
 | HTML5            | Visual Studio Code |
-| CSS3             | ChatGPT            | 
+| CSS3             | Vercel             | 
 | JavaScript       | Vlibras            |
 |                  | Google maps iframe |
 |                  | web3forms          |
