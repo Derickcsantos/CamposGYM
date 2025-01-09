@@ -1,32 +1,53 @@
-#sobre{
+#sobre {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.sobre-content{
-    background-color:#fff;
+.sobre-content {
+    background-color: #fff;
     padding: 50px 20px;
     flex: 1;
 }
 
-.image-sobre img{
+.image-sobre img {
     padding: 40px;
     width: 100%;
 }
 
-.sobre-content h2{
+.sobre-content h2 {
     color: #5b0004;
     text-align: center;
     margin: 0 0 40px 0;
 }
 
-.sobre-content p{
+.sobre-content p {
     font-size: 1.2rem;
     margin-bottom: 20px;
     color: #000;
     padding: 20px;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    /* Ajuste para telas de notebook */
+    .image-sobre img {
+        width: 60%; /* Reduz a largura da imagem para não ficar tão grande */
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+
+    .sobre-content p {
+        font-size: 1.4rem; /* Aumenta o tamanho da fonte */
+        padding: 20px;
+    }
+
+    .sobre-content {
+        flex: 0 0 45%; /* Define que o conteúdo de texto ocupará 45% da largura da tela */
+    }
+
+    #sobre {
+        justify-content: space-between;
+    }
 }
 
 @media (max-width: 768px) {
