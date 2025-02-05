@@ -9,11 +9,15 @@
     background-color: #fff;
     padding: 50px 20px;
     flex: 1;
+    max-width: 800px; /* Limita a largura máxima do conteúdo */
+    margin-right: 20px; /* Adiciona margem à direita para evitar que o texto fique muito próximo da imagem */
 }
 
 .image-sobre img {
     padding: 40px;
-    width: 100%;
+    width: 100%; /* Ajusta a largura da imagem */
+    justify-content: end;
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 .sobre-content h2 {
@@ -27,13 +31,32 @@
     margin-bottom: 20px;
     color: #000;
     padding: 20px;
+    text-align: justify;
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (min-width: 1500px) {
+    #sobre {
+        justify-content: space-between;
+    }
+
+    #sobre img {
+        margin: 100px 0 0 0;
+        width: 100%; /* Ajusta a largura da imagem para 60% */
+    }
+
+    .sobre-content p {
+        font-size: 1.4rem; /* Aumenta o tamanho da fonte */
+        padding: 10px;
+        width: 100%;
+        flex-direction: column;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 1500px) and (min-width: 769px) {
     /* Ajuste para telas de notebook */
     .image-sobre img {
-        width: 60%; /* Reduz a largura da imagem para não ficar tão grande */
-        margin: 0 auto; /* Centraliza a imagem */
+        width: 100%; /* Reduz a largura da imagem para não ficar tão grande */
     }
 
     .sobre-content p {
@@ -46,7 +69,8 @@
     }
 
     #sobre {
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
